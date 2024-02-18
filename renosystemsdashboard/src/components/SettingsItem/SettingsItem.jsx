@@ -30,7 +30,9 @@ function SettingsItem({ item }) {
     <NavLink style={navLinkStyles} to={`/${item}`} className=" rounded-md">
       <div className="">
         <div className="flex justify-between  items-center py-3 px-3">
-          <div className="text-[#d5d7db] text-xl ">{item}</div>
+          <div className="text-sm text-nowrap text-[#d5d7db] lg:text-xl ">
+            {item}
+          </div>
           <img
             className={` cursor-pointer ${!hidden ? "rotate-180" : ""}`}
             src={downarrow}
@@ -51,7 +53,9 @@ function SettingsItem({ item }) {
               style={subNavLinkStyles}
               to={`${item}/${listItem}`}
             >
-              <div className="text-[inherit] text-xl ">{listItem}</div>
+              <div className="text-[12px] text-[inherit] lg:text-xl ">
+                {listItem}
+              </div>
             </NavLink>
           ))}
         </div>

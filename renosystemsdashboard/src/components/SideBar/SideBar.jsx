@@ -28,20 +28,24 @@ function SideBar() {
       </div>
 
       <div className="title mb-3">
-        <div className=" flex px-3 gap-3">
+        <div className=" flex px-3 gap-3 items-center">
           <img src={dashboardIcon} width={30} height={30} alt="" />
-          <p className="text-[#d5d7db] text-xl"> Dashboard</p>
+          <p className=" text-sm text-[#d5d7db] lg:text-xl"> Dashboard</p>
         </div>
       </div>
 
       <div className="settings px-3">
-        <p className="text-[#9fa5b1] text-[1rem] uppercase">settings</p>
+        <p className=" text-sm text-[#9fa5b1] lg:text-[1rem] uppercase">
+          settings
+        </p>
       </div>
       <div className=" pl-3 flex gap-7 flex-col">
         {availalbeSettings.map((item, index) => (
           <SettingsItem item={item} key={index} />
         ))}
-        <div className="text-[#d5d7db] text-xl ">License Managment</div>
+        <div className="text-sm text-[#d5d7db] lg:text-xl ">
+          License Managment
+        </div>
       </div>
     </div>
   );
