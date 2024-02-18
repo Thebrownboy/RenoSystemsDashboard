@@ -1,0 +1,13 @@
+.sidebar::-webkit-scrollbar {
+  width: 12px;
+  background-color: white;
+}
+
+.sidebar::-webkit-scrollbar-track {
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 214, 214);
+  /* outline: 1px solid slategrey; */
+  border-radius: 12px;
+}
