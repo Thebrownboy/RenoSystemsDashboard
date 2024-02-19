@@ -7,7 +7,9 @@ function App() {
   const [sideBarDisplay, updateSideBarDisplay] = useState(true);
   return (
     <div className=" flex  relative  h-[1880px]">
-      {sideBarDisplay && <SideBar />}
+      {sideBarDisplay && (
+        <SideBar updateSideBarDisplay={updateSideBarDisplay} />
+      )}
       {console.log(sideBarDisplay)}
       <Routes>
         <Route
