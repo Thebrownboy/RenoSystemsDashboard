@@ -9,7 +9,7 @@ import downarrow from "../../assets/downarrow.svg";
 function SideBar({ updateSideBarDisplay }) {
   return (
     <div
-      className={`${styles["sidebar"]} p-3 lg:p-5 fixed top-0 left-0 overflow-y-scroll gap-3  md:gap-5 h-screen bg-[#050E2C] md:sticky flex  flex-col md:w-[200px]   lg:w-[300px] `}
+      className={`${styles["sidebar"]} p-3 lg:p-5 fixed top-0 left-0 overflow-y-scroll gap-3  md:gap-5 h-screen bg-[#050E2C] md:sticky flex  flex-col md:min-w-[200px] md:max-w-[200px]   lg:min-w-[300px] lg:max-w-[200px] `}
     >
       <div className="logo">
         <h1 className=" text-2xl lg:text-4xl capitalize text-white text-center">

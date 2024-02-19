@@ -11,18 +11,25 @@ function App() {
         <SideBar updateSideBarDisplay={updateSideBarDisplay} />
       )}
       {console.log(sideBarDisplay)}
-      <Routes>
-        <Route
-          path="/home"
-          element={
-            <MainSection
-              updateSideBarDisplay={updateSideBarDisplay}
-              sideBarDisplay={sideBarDisplay}
-            />
-          }
-        />
-        <Route path="/*" element={<div />} />
-      </Routes>
+      <div
+        className=" !w-full  md:w-auto"
+        style={{
+          width: !sideBarDisplay ? "calc(100%)" : "calc(100% - 300px )",
+        }}
+      >
+        <Routes>
+          <Route
+            path="/home"
+            element={
+              <MainSection
+                updateSideBarDisplay={updateSideBarDisplay}
+                sideBarDisplay={sideBarDisplay}
+              />
+            }
+          />
+          <Route path="/*" element={<div />} />
+        </Routes>
+      </div>
     </div>
   );
 }
