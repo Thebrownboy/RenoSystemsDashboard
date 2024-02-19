@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
+import UserMangment from "../UserManage/UserMangment";
 
 function MainSection({ updateSideBarDisplay, sideBarDisplay }) {
   return (
@@ -9,7 +10,9 @@ function MainSection({ updateSideBarDisplay, sideBarDisplay }) {
         lastName={"Amer"}
         updateSideBarDisplay={updateSideBarDisplay}
         sideBarDisplay={sideBarDisplay}
-      ></Header>
+      />
+
+      <UserMangment />
     </div>
   );
 }
