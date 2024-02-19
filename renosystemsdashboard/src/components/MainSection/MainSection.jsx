@@ -5,7 +5,7 @@ import MainCard from "../MainCard/MainCard";
 
 function MainSection({ updateSideBarDisplay, sideBarDisplay }) {
   return (
-    <div className=" flex-1 ">
+    <div className=" flex-1  bg-[#f1f3f5]">
       <Header
         firstName={"Nader"}
         lastName={"Amer"}

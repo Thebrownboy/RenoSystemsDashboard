@@ -30,3 +30,12 @@ export const months = [
   "November",
   "December",
 ];
+
+export const tableSections = [
+  "Name",
+  "User Name",
+  "Email Address",
+  "Group",
+  "Status",
+  "Created On",
+];
