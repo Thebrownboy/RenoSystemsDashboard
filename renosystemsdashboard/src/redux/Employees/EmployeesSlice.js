@@ -9,6 +9,22 @@ const employeeSlice = createSlice({
   name: "employees",
   initialState,
   reducers: {
+    nameFilter: (state, action) => {
+      state.shownEmployees = [];
+      for (let i = 0; i < state.allEmployees.length; i++) {
+        if (
+          state.allEmployees[i].firstName
+            .toLowerCase()
+            .includes(action.payload.toLowerCase()) ||
+          state.allEmployees[i].lastName
+            .toLowerCase()
+            .includes(action.payload.toLowerCase())
+        ) {
+          state.shownEmployees.push(state.allEmployees[i]);
+        }
+      }
+    },
+
     usernameFilter: (state, action) => {
       state.shownEmployees = [];
       for (let i = 0; i < state.allEmployees.length; i++) {
@@ -96,6 +112,7 @@ const employeeSlice = createSlice({
 
 export default employeeSlice.reducer;
 export const {
+  nameFilter,
   filter,
   addEmployees,
   allFieldsFilter,

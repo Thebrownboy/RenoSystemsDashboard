@@ -4,7 +4,8 @@ import CustomizedSelect from "../CustomizedSelect/CustomizedSelect";
 import searchIcon from "../../assets/magnifying-glass.svg";
 import { usernameFilter } from "../../redux/Employees/EmployeesSlice";
 import { useDispatch } from "react-redux";
-import { dateFilter } from "../../redux/Employees/EmployeesSlice";
+import { dateFilter, nameFilter } from "../../redux/Employees/EmployeesSlice";
+
 function FilterBar() {
   const generalSearchRef = useRef();
   const usernameSearchRef = useRef();
@@ -25,6 +26,7 @@ function FilterBar() {
           ref={generalSearchRef}
           placeholder="Search..."
           className="outline-none pl-10 py-2 border border-1 rounded-md max-w-[200px]"
+          onChange={(e) => dispatch(nameFilter(e.target.value))}
         />
       </div>
 
