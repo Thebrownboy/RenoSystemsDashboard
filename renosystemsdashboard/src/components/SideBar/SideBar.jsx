@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import searchIcon from "../../assets/magnifying-glass.svg";
 import dashboardIcon from "../../assets/dashboard.svg";
 import { availalbeSettings } from "../../../constants";
 import SettingsItem from "../SettingsItem/SettingsItem";
 import styles from "./sidebar.module.css";
 import downarrow from "../../assets/downarrow.svg";
-
+import { useDispatch } from "react-redux";
+import { allFieldsFilter } from "../../redux/Employees/EmployeesSlice";
 function SideBar({ updateSideBarDisplay }) {
+  const dispatch = useDispatch();
+  const searchBarRef = useRef();
   return (
     <div
       className={`${styles["sidebar"]} p-3 lg:p-5 fixed top-0 left-0 overflow-y-scroll gap-3  md:gap-5 h-screen bg-[#050E2C] md:sticky flex  flex-col md:min-w-[200px] md:max-w-[200px]   lg:min-w-[300px] lg:max-w-[200px] `}
@@ -21,11 +24,16 @@ function SideBar({ updateSideBarDisplay }) {
           src={searchIcon}
           alt=""
           className="w-[24px] h-[24px] absolute top-[25%] right-4 cursor-pointer"
+          onClick={() => {
+            dispatch(allFieldsFilter(searchBarRef.current.value));
+          }}
         />
         <input
           type="search"
           className="w-full h-10 rounded-full text-sm px-4 m-0 outline-none "
           placeholder="Quick search"
+          ref={searchBarRef}
+          onChange={() => dispatch(allFieldsFilter(searchBarRef.current.value))}
         />
       </div>
 

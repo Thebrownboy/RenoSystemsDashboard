@@ -32,32 +32,38 @@ const employeeSlice = createSlice({
 
     allFieldsFilter: (state, action) => {
       state.shownEmployees = [];
-      let msg = "hello";
-      msg.toLowerCase;
+      console.log("this is payload", action.payload);
+      console.log(state.allEmployees[0].status);
       for (let i = 0; i < state.allEmployees.length; i++) {
         if (
           state.allEmployees[i].status.toLowerCase() ===
             action.payload.toLowerCase() ||
-          state.allEmployees[i].email.toLowerCase().includes(action.payload) ||
+          state.allEmployees[i].email
+            .toLowerCase()
+            .includes(action.payload.toLowerCase()) ||
           state.allEmployees[i].firstName
             .toLowerCase()
-            .includes(action.payload) ||
+            .includes(action.payload.toLowerCase()) ||
           state.allEmployees[i].lastName
             .toLowerCase()
-            .includes(action.payload) ||
+            .includes(action.payload.toLowerCase()) ||
           state.allEmployees[i].userName
             .toLowerCase()
-            .includes(action.payload) ||
+            .includes(action.payload.toLowerCase()) ||
           state.allEmployees[i].group.toLowerCase() ===
             action.payload.toLowerCase()
         ) {
           state.shownEmployees.push(state.allEmployees[i]);
         }
       }
+      console.log(state.shownEmployees);
     },
     addEmployees: (state, action) => {
+      console.log(action.payload);
       state.allEmployees = [...state.allEmployees, ...action.payload];
       state.shownEmployees = [...state.allEmployees];
+
+      console.log(state.allEmployees);
     },
     reset: (state) => {
       state.shownEmployees = [...state.allEmployees];
@@ -66,4 +72,4 @@ const employeeSlice = createSlice({
 });
 
 export default employeeSlice.reducer;
-export const { filter, addEmployees } = employeeSlice.actions;
+export const { filter, addEmployees, allFieldsFilter } = employeeSlice.actions;
