@@ -35,16 +35,16 @@ function TableRow({
         </div>
       </div>
 
-      <div className="  min-w-[200px] overflow-hidden text-ellipsis  ">
+      <div className="  min-w-[200px] max-w-[200px] overflow-hidden text-ellipsis  ">
         {userName}
       </div>
-      <div className="  min-w-[200px] overflow-hidden text-ellipsis  ">
+      <div className="  min-w-[200px] max-w-[200px] overflow-hidden text-ellipsis  ">
         {email}
       </div>
-      <div className="  min-w-[200px] overflow-hidden text-ellipsis  ">
+      <div className="  min-w-[200px] max-w-[200px] overflow-hidden text-ellipsis  ">
         {group}
       </div>
-      <div className="  min-w-[200px] overflow-hidden text-ellipsis  ">
+      <div className="  min-w-[200px] max-w-[200px] overflow-hidden text-ellipsis  ">
         {status}
       </div>
       <div className="  min-w-[200px] overflow-hidden text-ellipsis  ">
