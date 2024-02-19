@@ -42,6 +42,33 @@ export const tableSections = [
 
 export const users = [
   {
+    firstName: "John",
+    lastName: "Doe",
+    userName: "John.Doe",
+    createdOn: "Jan 15, 2023",
+    email: "john.doe@example.com",
+    group: "Admin",
+    status: "active",
+  },
+  {
+    firstName: "Emily",
+    lastName: "Smith",
+    userName: "Emily.Smith",
+    createdOn: "Feb 28, 2023",
+    email: "emily.smith@example.com",
+    group: "HR",
+    status: "active",
+  },
+  {
+    firstName: "Michael",
+    lastName: "Johnson",
+    userName: "Michael.Johnson",
+    createdOn: "Mar 5, 2023",
+    email: "michael.johnson@example.com",
+    group: "Marketing",
+    status: "active",
+  },
+  {
     firstName: "Ramy",
     lastName: "Mohsen",
     userName: "Ramy.Mohsen",

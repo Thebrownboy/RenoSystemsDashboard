@@ -29,17 +29,19 @@ function SettingsItem({ item }) {
   return (
     <NavLink style={navLinkStyles} to={`/${item}`} className=" rounded-md">
       <div className="">
-        <div className="flex justify-between  items-center py-3 px-3">
+        <div className="flex justify-between  items-center py-3 px-3 ">
           <div className="text-sm text-nowrap text-[#d5d7db] lg:text-xl ">
             {item}
           </div>
           <img
-            className={` cursor-pointer ${!hidden ? "rotate-180" : ""}`}
+            className={`  cursor-pointer ${!hidden ? "rotate-180" : ""}`}
             src={downarrow}
             alt=""
             width={24}
             height={24}
-            onClick={() => updateHidden(!hidden)}
+            onClick={(e) => {
+              updateHidden(!hidden);
+            }}
           />
         </div>
         <div

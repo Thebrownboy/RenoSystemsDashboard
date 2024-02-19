@@ -3,6 +3,7 @@ import "./App.css";
 import MainSection from "./components/MainSection/MainSection";
 import SideBar from "./components/SideBar/SideBar";
 import { Routes, Route } from "react-router-dom";
+import Fallback from "./components/Fallback/Fallback";
 function App() {
   const [sideBarDisplay, updateSideBarDisplay] = useState(true);
   return (
@@ -26,7 +27,7 @@ function App() {
               />
             }
           />
-          <Route path="/*" element={<div />} />
+          <Route path="/*" element={<Fallback />} />
         </Routes>
       </div>
     </div>
