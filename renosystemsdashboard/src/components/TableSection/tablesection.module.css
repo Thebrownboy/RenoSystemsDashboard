@@ -1,0 +1,29 @@
+/* Width and height of the scrollbar */
+.table-section::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  display: none;
+}
+
+/* Track (the background) */
+.table-section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle (the draggable part) */
+.table-section::-webkit-scrollbar-thumb {
+  background: #888;
+  position: sticky;
+  left: 0;
+  top: 100%;
+  border-radius: 5px;
+}
+
+/* On hover, make the scrollbar handle darker */
+.table-section::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.table-section:hover::-webkit-scrollbar {
+  display: block;
+}

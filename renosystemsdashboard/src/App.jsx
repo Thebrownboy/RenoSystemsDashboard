@@ -15,9 +15,6 @@ function App() {
         className={`!w-full  ${
           !sideBarDisplay ? "md:!w-full" : "md:!w-[calc(100%-200px)]"
         } ${!sideBarDisplay ? "lg:!w-full" : "lg:!w-[calc(100%-300px)]"} `}
-        style={{
-          width: !sideBarDisplay ? "calc(100%)" : "calc(100% - 300px )",
-        }}
       >
         <Routes>
           <Route
