@@ -12,7 +12,11 @@ const employeeSlice = createSlice({
     usernameFilter: (state, action) => {
       state.shownEmployees = [];
       for (let i = 0; i < state.allEmployees.length; i++) {
-        if (state.allEmployees[i].userName === action.payload) {
+        if (
+          state.allEmployees[i].userName
+            .toLowerCase()
+            .includes(action.payload.toLowerCase())
+        ) {
           state.shownEmployees.push(state.allEmployees[i]);
         }
       }
@@ -28,6 +32,25 @@ const employeeSlice = createSlice({
           state.shownEmployees.push(state.allEmployees[i]);
         }
       }
+    },
+    dateFilter: (state, action) => {
+      state.shownEmployees = [];
+      const payloadDate = new Date(action.payload);
+
+      for (let i = 0; i < state.allEmployees.length; i++) {
+        if (
+          new Date(state.allEmployees[i].createdOn).getDate() ===
+            payloadDate.getDate() &&
+          new Date(state.allEmployees[i].createdOn).getMonth() ===
+            payloadDate.getMonth() &&
+          new Date(state.allEmployees[i].createdOn).getFullYear() ===
+            payloadDate.getFullYear()
+        ) {
+          state.shownEmployees.push(state.allEmployees[i]);
+        }
+      }
+
+      console.log();
     },
 
     allFieldsFilter: (state, action) => {
@@ -72,4 +95,11 @@ const employeeSlice = createSlice({
 });
 
 export default employeeSlice.reducer;
-export const { filter, addEmployees, allFieldsFilter } = employeeSlice.actions;
+export const {
+  filter,
+  addEmployees,
+  allFieldsFilter,
+  statusFliter,
+  usernameFilter,
+  dateFilter,
+} = employeeSlice.actions;

@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-
+import { useDispatch } from "react-redux";
 import downarrowIcon from "../../assets/downarrow.svg";
+import { statusFliter } from "../../redux/Employees/EmployeesSlice";
 function CustomizedSelect({ selectValue, updateSelectValue }) {
   const [showOptions, updateShowOptions] = useState(false);
   const [value, upateValue] = useState("any");
   const selectRef = useRef();
   const expandRef = useRef();
+  const dispatch = useDispatch();
   useEffect(() => {
     document.body.addEventListener("click", (e) => {
       if (e.target !== selectRef.current && e.target !== expandRef.current) {
@@ -42,6 +44,7 @@ function CustomizedSelect({ selectValue, updateSelectValue }) {
           onClick={(e) => {
             upateValue(e.target.id);
             updateShowOptions(false);
+            dispatch(statusFliter(e.target.id));
           }}
         >
           locked
@@ -52,6 +55,7 @@ function CustomizedSelect({ selectValue, updateSelectValue }) {
           onClick={(e) => {
             updateShowOptions(false);
             upateValue(e.target.id);
+            dispatch(statusFliter(e.target.id));
           }}
         >
           Inactive
@@ -62,6 +66,7 @@ function CustomizedSelect({ selectValue, updateSelectValue }) {
           onClick={(e) => {
             upateValue(e.target.id);
             updateShowOptions(false);
+            dispatch(statusFliter(e.target.id));
           }}
         >
           Active
