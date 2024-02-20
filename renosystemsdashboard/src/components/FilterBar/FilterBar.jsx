@@ -46,7 +46,7 @@ function FilterBar() {
           type="text"
           name="username-search"
           ref={usernameSearchRef}
-          className="outline-none  px-2 py-2 border border-1 rounded-md max-w-[150px]"
+          className="outline-none  px-2 py-2 border border-1 rounded-md max-w-[200px]"
           placeholder="User Name"
           onChange={(e) => dispatch(usernameFilter(e.target.value))}
         />
@@ -60,7 +60,7 @@ function FilterBar() {
         additionalStyles={"w-[200px]"}
       />
 
-      <div className=" relative flex items-center gap-4 py-2 border-1 border rounded-md px-3 cursor-pointer  before:absolute before:top-[-14px] before:left-[10px] before:content-['Created\_On'] before:w-fit before:h-5 before:z-10 before:bg-white before:text-[#7A7E90]">
+      <div className=" w-[200px] relative flex items-center gap-4 py-2 border-1 border rounded-md px-3 cursor-pointer  before:absolute before:top-[-14px] before:left-[10px] before:content-['Created\_On'] before:w-fit before:h-5 before:z-10 before:bg-white before:text-[#7A7E90]">
         <input
           type="date"
           className=" outline-none"
