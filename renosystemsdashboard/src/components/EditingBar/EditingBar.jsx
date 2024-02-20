@@ -5,7 +5,7 @@ import lockIcon from "../../assets/lock-keyhole-svgrepo-com.svg";
 import blockIcon from "../../assets/block-prohibited-svgrepo-com.svg";
 function EditingBar() {
   return (
-    <div className="flex justify-between py-3 px-3 items-center">
+    <div className="flex justify-between py-3 px-4 items-center">
       <div className="editing-icons flex gap-3 items-center">
         <div className="select-number border-r pr-2 ">1 selected</div>
         <div className="edit-icon bg-[#E7E9Ef] p-1  rounded-md cursor-pointer">
