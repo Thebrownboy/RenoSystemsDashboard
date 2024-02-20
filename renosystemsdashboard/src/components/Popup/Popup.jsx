@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import CustomizedSelect from "../CustomizedSelect/CustomizedSelect";
 import styles from "./popup.module.css";
 function Popup({ updateShowPopup }) {
   const [userGroupValue, updateUserGroupValue] = useState("Choose User Group");
   const [userProfileValue, updateUserProfileValue] = useState("Choose Profile");
+  const firstNameRef = useRef();
+  const lastNameRef = useRef();
+  const userNameRef = useRef();
+  const emailRef = useRef();
+
   return (
     <div className="  flex justify-center   fixed top-0 left-0 bg-[#7F7F7F] bg-opacity-35 w-screen h-full z-[40000000000]">
       <div
@@ -22,12 +27,27 @@ function Popup({ updateShowPopup }) {
         <div className="bg-[#FAF8FB] px-4 flex flex-col gap-1">
           <div className="full-name flex flex-col mt-5 gap-3">
             <label htmlFor="" className="text-[16px] font-bold text-[#0C1533]">
-              Full Name
+              First Name
             </label>
             <div>
               <input
+                ref={firstNameRef}
                 type="text"
-                placeholder="Enter full name"
+                placeholder="Enter first name"
+                className="px-2 py-3 rounded-md w-full outline-none border border-1"
+              />
+            </div>
+          </div>
+
+          <div className="full-name flex flex-col mt-5 gap-3">
+            <label htmlFor="" className="text-[16px] font-bold text-[#0C1533]">
+              Last Name
+            </label>
+            <div>
+              <input
+                ref={lastNameRef}
+                type="text"
+                placeholder="Enter last name"
                 className="px-2 py-3 rounded-md w-full outline-none border border-1"
               />
             </div>
@@ -39,6 +59,7 @@ function Popup({ updateShowPopup }) {
             </label>
             <div>
               <input
+                ref={userNameRef}
                 type="text"
                 placeholder="Enter Username"
                 className="px-2 py-3 rounded-md w-full outline-none border border-1"
@@ -52,6 +73,7 @@ function Popup({ updateShowPopup }) {
             </label>
             <div>
               <input
+                ref={emailRef}
                 type="text"
                 placeholder="Enter user eamil addresss"
                 className="px-2 py-3 rounded-md w-full outline-none border border-1"

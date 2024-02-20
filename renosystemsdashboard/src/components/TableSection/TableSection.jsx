@@ -9,7 +9,15 @@ function TableSection() {
   const employees = useSelector((state) => state.employee.shownEmployees);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(addEmployees(users));
+    const getEmployees = async () => {
+      const data = await fetch("http://localhost:3000/employees", {
+        method: "GET",
+      }).then((res) => res.json());
+
+      dispatch(addEmployees(data));
+    };
+    getEmployees();
+    // dispatch(addEmployees(users));
   }, []);
   return (
     <div
