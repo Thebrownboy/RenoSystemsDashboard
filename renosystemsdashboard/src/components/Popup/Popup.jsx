@@ -82,7 +82,7 @@ function Popup({ updateShowPopup, user }) {
             lastName: lastNameRef.current.value,
             userName: userNameRef.current.value,
             email: emailRef.current.value,
-            status: "active",
+            status: user ? user.status : "active",
             group: userGroupValue,
             createdOn: `${months[newDate.getMonth()].substring(
               0,
