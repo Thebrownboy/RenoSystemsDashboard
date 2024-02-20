@@ -59,17 +59,11 @@ The objective of this dashboard is to provide a centralized platform for trackin
    
 
 
-## Demo  <a name = "Demo"></a>
+## Demo  <a name = "demo"></a>
 
 
 https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/59e9a593-db38-463b-9f2a-bc6e2946d897
 
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 5023a2efcf70fecf975cdf14a4cf755a66586a52
 
 
 
