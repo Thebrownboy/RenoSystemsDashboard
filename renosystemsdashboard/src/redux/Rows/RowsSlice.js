@@ -25,9 +25,14 @@ const rowsSlice = createSlice({
 
       state.length = state.selected.length;
     },
+    unselectAll: (state) => {
+      state.selected = [];
+      state.length = state.selected.length;
+    },
   },
 });
 
 export default rowsSlice.reducer;
 
-export const { addToSelected, removeFromSelected } = rowsSlice.actions;
+export const { addToSelected, removeFromSelected, unselectAll } =
+  rowsSlice.actions;

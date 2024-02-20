@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { addToSelected, removeFromSelected } from "../../redux/Rows/RowsSlice";
 function TableRow({
   firstName,
@@ -11,9 +11,18 @@ function TableRow({
   createdOn,
   id,
 }) {
+  const length = useSelector((state) => state.rows.length);
   const [checked, updateChecked] = useState(false);
   const parentRef = useRef();
   const dispatch = useDispatch();
+  const inputRef = useRef();
+
+  useEffect(() => {
+    if (length === 0 && checked) {
+      inputRef.current.click();
+      // if the unselect all button clicked
+    }
+  }, [length]);
   return (
     <div
       ref={parentRef}
@@ -24,6 +33,7 @@ function TableRow({
     >
       <div className="mr-3 w-5 h-5">
         <input
+          ref={inputRef}
           type="checkbox"
           className=" w-full h-full"
           value={checked}
