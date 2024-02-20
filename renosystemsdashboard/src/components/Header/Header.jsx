@@ -56,7 +56,7 @@ function Header({ firstName, lastName, updateSideBarDisplay, sideBarDisplay }) {
             <UserSettings
               firstName={firstName}
               lastName={lastName}
-              classStyles="absolute left-[-64px] top-7 rounded-sm flex  flex-col gap-3 justify-center items-center bg-[#f1eaea] p-5"
+              classStyles="absolute left-[-64px] top-7 rounded-sm flex  flex-col gap-3 justify-center items-center bg-[#f1eaea] p-5 z-[50]"
             />
           )}
         </div>

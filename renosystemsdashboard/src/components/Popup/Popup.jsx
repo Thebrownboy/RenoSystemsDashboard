@@ -55,9 +55,9 @@ function Popup({ updateShowPopup, user }) {
   }, []);
 
   return (
-    <div className=" text-[1rem]  flex justify-center   fixed top-0 left-0 bg-[#7F7F7F] bg-opacity-35 w-screen h-full z-[40000000000]">
+    <div className=" text-[1rem]  flex sm:justify-center   fixed top-0 left-0 bg-[#7F7F7F] bg-opacity-35 w-screen h-full z-[40000000000]">
       <div
-        className={` overflow-scroll bg-[#FAF8FB] add-new-user-card w-1/2  rounded-md  mt-10 ${styles["popup"]}`}
+        className={` flex-1 sm:flex-none overflow-scroll bg-[#FAF8FB] add-new-user-card w-1/2  rounded-md  mt-10 ${styles["popup"]}`}
       >
         <div className="card-header flex justify-between rounded-tl-md px-4 py-3 bg-[#050E2D]">
           <h2 className="text-white"> Add New User</h2>

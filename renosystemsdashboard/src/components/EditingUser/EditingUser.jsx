@@ -18,7 +18,7 @@ function EditingUser() {
             updateShowPopUp(!showPopUp);
           }
         }}
-        className="edit-icon bg-[#E7E9Ef] p-1  rounded-md cursor-pointer"
+        className="edit-icon bg-[#E7E9Ef] p-1  rounded-md cursor-pointer min-w-[24px] min-h-[24px]"
       >
         <img src={penIcon} width={24} height={24} alt="" />
       </div>
