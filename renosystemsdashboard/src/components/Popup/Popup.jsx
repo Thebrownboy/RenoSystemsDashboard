@@ -17,6 +17,9 @@ function Popup({ updateShowPopup, user }) {
   const [usernameErrorShow, updateUserNameNameErrorShow] = useState(false);
   const [emailErrorShow, updateEmailErrorShow] = useState(false);
   const [groupErrorShow, updateGroupErrorShow] = useState(false);
+  const [userNameErrorMsg, updateUserNameErrorMsg] = useState(
+    " Please enter a valid user name no spaces allowed , only charcters, dot and  underscore"
+  );
 
   const submitValues = async () => {
     const nameRegex = new RegExp("^[a-zA-Z]{3,}$");
@@ -34,8 +37,21 @@ function Popup({ updateShowPopup, user }) {
       updateLastNameErrorShow(true);
       return;
     }
+
+    try {
+      const response = await fetch(
+        `http://localhost:3000/employees?userName=${userNameRef.current.value}`
+      ).then((res) => res.json());
+
+      if (response.length !== 0) {
+        updateUserNameErrorMsg("this user name is already taken");
+        updateUserNameNameErrorShow(true);
+        return;
+      }
+    } catch (err) {}
     if (!userNameReg.test(userNameRef.current.value)) {
       updateUserNameNameErrorShow(true);
+
       return;
     }
 
@@ -131,9 +147,7 @@ function Popup({ updateShowPopup, user }) {
 
           <InputField
             placeholder={"Enter user  user name"}
-            errorMsg={
-              "Please enter a valid user name no spaces allowed , only charcters, dot and  underscore"
-            }
+            errorMsg={userNameErrorMsg}
             reference={userNameRef}
             label={"UserName"}
             showError={usernameErrorShow}
