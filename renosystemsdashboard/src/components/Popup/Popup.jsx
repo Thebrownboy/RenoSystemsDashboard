@@ -34,16 +34,19 @@ function Popup({ updateShowPopup, user }) {
       updateLastNameErrorShow(true);
       return;
     }
+    if (!userNameReg.test(userNameRef.current.value)) {
+      updateUserNameNameErrorShow(true);
+      return;
+    }
 
     if (!emailRegex.test(emailRef.current.value)) {
       updateEmailErrorShow(true);
       return;
     }
-    if (!userNameReg.test(userNameRef.current.value)) {
-      updateUserNameNameErrorShow(true);
-      return;
-    }
+
     if (userGroupValue === "Choose User Group") {
+      updateGroupErrorShow(true);
+      return;
     }
     const newDate = new Date();
     try {
@@ -112,6 +115,7 @@ function Popup({ updateShowPopup, user }) {
             reference={firstNameRef}
             label={"firstName"}
             showError={firstNameErrorShow}
+            updateError={updateFirstNameErrorShow}
           />
 
           <InputField
@@ -122,14 +126,18 @@ function Popup({ updateShowPopup, user }) {
             reference={lastNameRef}
             label={"lastName"}
             showError={lastNameErrorShow}
+            updateError={updateLastNameErrorShow}
           />
 
           <InputField
             placeholder={"Enter user  user name"}
-            errorMsg={"Please enter a valid user name no spaces allowed"}
+            errorMsg={
+              "Please enter a valid user name no spaces allowed , only charcters, dot and  underscore"
+            }
             reference={userNameRef}
             label={"UserName"}
             showError={usernameErrorShow}
+            updateError={updateUserNameNameErrorShow}
           />
 
           <InputField
@@ -138,6 +146,7 @@ function Popup({ updateShowPopup, user }) {
             reference={emailRef}
             label={"Email"}
             showError={emailErrorShow}
+            updateError={updateEmailErrorShow}
           />
 
           <div className="flex flex-col mt-5 gap-3">
