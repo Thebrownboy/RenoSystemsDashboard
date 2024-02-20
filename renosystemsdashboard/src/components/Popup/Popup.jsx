@@ -49,6 +49,10 @@ function Popup() {
               />
             </div>
           </div>
+
+          <div className="relative">
+            <CustomizedSelect />
+          </div>
         </div>
       </div>
     </div>

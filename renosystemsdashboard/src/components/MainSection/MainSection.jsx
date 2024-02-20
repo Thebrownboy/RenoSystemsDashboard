@@ -14,7 +14,7 @@ function MainSection({ updateSideBarDisplay, sideBarDisplay }) {
         sideBarDisplay={sideBarDisplay}
       />
 
-      <Popup />
+      {/* <Popup /> */}
 
       <UserMangment />
       <MainCard />
