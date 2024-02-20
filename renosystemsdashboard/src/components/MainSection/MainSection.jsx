@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import UserMangment from "../UserManage/UserMangment";
 import MainCard from "../MainCard/MainCard";
 import Popup from "../Popup/Popup";
 
 function MainSection({ updateSideBarDisplay, sideBarDisplay }) {
+  const [showPopUp, updateShowPopup] = useState(false);
+  useEffect(() => {
+    if (showPopUp) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [showPopUp]);
   return (
     <div className="  bg-[#f1f3f5]">
       <Header
@@ -14,9 +22,9 @@ function MainSection({ updateSideBarDisplay, sideBarDisplay }) {
         sideBarDisplay={sideBarDisplay}
       />
 
-      <Popup />
+      {showPopUp && <Popup updateShowPopup={updateShowPopup} />}
 
-      <UserMangment />
+      <UserMangment updateShowPopup={updateShowPopup} />
       <MainCard />
     </div>
   );

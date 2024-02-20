@@ -45,14 +45,14 @@ function CustomizedSelect({
       <div
         className={`${
           showOptions ? "block" : "hidden"
-        } flex flex-col absolute z-50 w-full top-full left-0`}
+        } flex flex-col absolute z-50 w-full top-full left-0 rounded-md`}
       >
         {items.map((item, index) => {
           return (
             <div
               key={index}
               id={`${item}`}
-              className=" p-3 bg-white border-b-1 border hover:bg-blue-400"
+              className=" p-3 bg-white border-b-1 border hover:bg-blue-800 rounded-md"
               onClick={(e) => {
                 updateSelectValue(e.target.id);
                 updateShowOptions(false);

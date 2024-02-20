@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomizedSelect from "../CustomizedSelect/CustomizedSelect";
 import styles from "./popup.module.css";
-function Popup() {
+function Popup({ updateShowPopup }) {
+  const [userGroupValue, updateUserGroupValue] = useState("Choose User Group");
+  const [userProfileValue, updateUserProfileValue] = useState("Choose Profile");
   return (
-    <div className="  flex justify-center   fixed top-0 left-0 bg-[#7F7F7F] w-screen h-full z-[40000000000]">
+    <div className="  flex justify-center   fixed top-0 left-0 bg-[#7F7F7F] bg-opacity-35 w-screen h-full z-[40000000000]">
       <div
         className={` overflow-scroll bg-[#FAF8FB] add-new-user-card w-1/2  rounded-md  mt-10 ${styles["popup"]}`}
       >
         <div className="card-header flex justify-between rounded-tl-md px-4 py-3 bg-[#050E2D]">
           <h2 className="text-white"> Add New User</h2>
-          <div className="text-white">X</div>
+          <div
+            onClick={() => updateShowPopup(false)}
+            className="text-white cursor-pointer"
+          >
+            X
+          </div>
         </div>
 
         <div className="bg-[#FAF8FB] px-4 flex flex-col gap-1">
@@ -57,8 +64,9 @@ function Popup() {
               User Group
             </label>
             <CustomizedSelect
-              selectValue={"Choose User Group"}
+              selectValue={userGroupValue}
               items={["one", "Two", "three"]}
+              updateSelectValue={updateUserGroupValue}
             />
           </div>
 
@@ -67,15 +75,19 @@ function Popup() {
               Assign Profile
             </label>
             <CustomizedSelect
-              selectValue={"Choose Profile"}
+              selectValue={userProfileValue}
               items={["one", "Two", "three"]}
+              updateSelectValue={updateUserProfileValue}
             />
           </div>
         </div>
         <div className=" mt-5 py-1 bg-[#F8FAFB] footer flex justify-between items-center  px-4  border-t-2 ">
-          <div className="reset">Reset fields</div>
+          <div className="reset underline cursor-pointer">Reset fields</div>
           <div className="buttons flex gap-4">
-            <button className=" p-3 rounded-md bg-[#f6f8f9] border-2">
+            <button
+              onClick={() => updateShowPopup(false)}
+              className=" p-3 rounded-md bg-[#f6f8f9] border-2"
+            >
               Cancel
             </button>
             <button className=" px-3  rounded-md bg-[#22A565]">Submit</button>
