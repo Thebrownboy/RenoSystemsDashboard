@@ -4,10 +4,10 @@
       "firstName": "Emily",
       "lastName": "Smith",
       "userName": "Emily.Smith",
-      "email": "emily.smith@example.com",
-      "status": "Locked",
-      "group": "HR",
-      "createdOn": "Feb 20, 2024",
+      "email": "emily.smith@gmail.com",
+      "status": "active",
+      "group": "Office",
+      "createdOn": "Feb 21, 2024",
       "id": "2"
     },
     {
@@ -28,7 +28,7 @@
       "createdOn": "Dec 10,2022",
       "email": "ramy.mohsen@google.com",
       "group": "HR",
-      "status": "Locked"
+      "status": "InActive"
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "createdOn": "Oct 22,2018",
       "email": "hisham.haggag@like.com",
       "group": "HR",
-      "status": "Locked"
+      "status": "InActive"
     },
     {
       "id": "6",
@@ -48,7 +48,7 @@
       "createdOn": "Oct 22,2018",
       "email": "khaled.adam@like.com",
       "group": "HR",
-      "status": "Locked"
+      "status": "InActive"
     },
     {
       "id": "7",
@@ -58,7 +58,7 @@
       "createdOn": "Jun 17, 2020",
       "email": "kareem.farouk@nuvb.net",
       "group": "HR",
-      "status": "Locked"
+      "status": "InActive"
     },
     {
       "id": "8",
@@ -101,14 +101,14 @@
       "status": "Locked"
     },
     {
-      "firstName": "abdalla",
+      "id": "fcd2",
+      "firstName": "Abdalla",
       "lastName": "Mahmoud",
       "userName": "Abdalla.Mahmoud",
-      "email": "AbdallaMahmoud@gmail.com",
+      "email": "Abdalla.Mahmoud@gmail.com",
       "status": "active",
       "group": "Managers",
-      "createdOn": "Feb 20, 2024",
-      "id": "61d9"
+      "createdOn": "Feb 21, 2024"
     }
   ]
 }
