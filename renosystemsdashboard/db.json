@@ -5,8 +5,8 @@
       "lastName": "Smith",
       "userName": "Emily.Smith",
       "email": "emily.smith@example.com",
-      "status": "InActive",
-      "group": "HR",
+      "status": "active",
+      "group": "Office",
       "createdOn": "Feb 20, 2024",
       "id": "2"
     },

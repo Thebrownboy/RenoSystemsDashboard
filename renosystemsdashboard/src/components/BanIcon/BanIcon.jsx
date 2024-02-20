@@ -30,7 +30,7 @@ function BanIcon({ status }) {
   };
   return (
     <div
-      className="block-icon bg-[#E7E9Ef] p-1 rounded-md cursor-pointer min-w-[24px] min-h-[24px]"
+      className=" w-full flex justify-center sm:w-auto sm:block block-icon bg-[#E7E9Ef] p-1 rounded-md cursor-pointer min-w-[24px] min-h-[24px]"
       onClick={handleClick}
     >
       <img
