@@ -1,8 +1,9 @@
 import React from "react";
 import blockIcon from "../../assets/block-prohibited-svgrepo-com.svg";
 import { useSelector } from "react-redux";
+import lockIcon from "../../assets/lock-keyhole-svgrepo-com.svg";
 
-function BanIcon() {
+function BanIcon({ status }) {
   const selected = useSelector((state) => state.rows.selected);
   const handleClick = async () => {
     for (let i = 0; i < selected.length; i++) {
@@ -13,12 +14,15 @@ function BanIcon() {
           {
             method: "PATCH",
             body: JSON.stringify({
-              status: "InActive",
+              status,
             }),
           }
         ).then((res) => res.json());
 
-        // window.location.reload();
+        // just for json
+        setTimeout(function () {
+          window.location.reload();
+        }, 1000);
       } catch (err) {
         console.log(err);
       }
@@ -29,7 +33,12 @@ function BanIcon() {
       className="block-icon bg-[#E7E9Ef] p-1 rounded-md cursor-pointer"
       onClick={handleClick}
     >
-      <img src={blockIcon} width={24} height={24} alt="" />
+      <img
+        src={status === "InActive" ? blockIcon : lockIcon}
+        width={24}
+        height={24}
+        alt=""
+      />
     </div>
   );
 }

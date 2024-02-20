@@ -18,7 +18,7 @@
       "createdOn": "Mar 5, 2023",
       "email": "michael.johnson@example.com",
       "group": "HR",
-      "status": "InActive"
+      "status": "Locked"
     },
     {
       "id": "4",

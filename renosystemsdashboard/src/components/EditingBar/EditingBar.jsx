@@ -1,6 +1,5 @@
 import React from "react";
 import dotsIcon from "../../assets/dots-vertical-svgrepo-com.svg";
-import lockIcon from "../../assets/lock-keyhole-svgrepo-com.svg";
 import { useDispatch, useSelector } from "react-redux";
 import AssignGroup from "../AssignGroup/AssignGroup";
 import { unselectAll } from "../../redux/Rows/RowsSlice";
@@ -14,10 +13,10 @@ function EditingBar() {
       <div className="editing-icons flex gap-3 items-center">
         <div className="select-number border-r pr-2 ">{length} selected</div>
         {!(length > 1) && <EditingUser />}
-        <BanIcon />
-        <div className="lock-icon bg-[#E7E9Ef] p-1 rounded- cursor-pointer">
-          <img src={lockIcon} width={24} height={24} alt="" />
-        </div>
+
+        <BanIcon status="InActive" />
+        <BanIcon status="Locked" />
+
         <div className="assign-profile p-2 bg-[#E7E9Ef] rounded-md text-[#707689] font-semibold cursor-pointer">
           Assign to Profile
         </div>
