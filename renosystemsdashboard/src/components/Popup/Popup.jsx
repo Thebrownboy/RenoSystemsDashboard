@@ -3,6 +3,8 @@ import CustomizedSelect from "../CustomizedSelect/CustomizedSelect";
 import styles from "./popup.module.css";
 import { months } from "../../../constants";
 import { groups } from "../../../constants";
+import ErrorMsg from "../ErrorMsg/ErrorMsg";
+import InputField from "../InputField/InputField";
 function Popup({ updateShowPopup, user }) {
   const [userGroupValue, updateUserGroupValue] = useState("Choose User Group");
   const [userProfileValue, updateUserProfileValue] = useState("Choose Profile");
@@ -10,7 +12,39 @@ function Popup({ updateShowPopup, user }) {
   const lastNameRef = useRef();
   const userNameRef = useRef();
   const emailRef = useRef();
+  const [firstNameErrorShow, updateFirstNameErrorShow] = useState(false);
+  const [lastNameErrorShow, updateLastNameErrorShow] = useState(false);
+  const [usernameErrorShow, updateUserNameNameErrorShow] = useState(false);
+  const [emailErrorShow, updateEmailErrorShow] = useState(false);
+  const [groupErrorShow, updateGroupErrorShow] = useState(false);
+
   const submitValues = async () => {
+    const nameRegex = new RegExp("^[a-zA-Z]{3,}$");
+    const emailRegex = new RegExp(
+      "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$"
+    );
+
+    const userNameReg = new RegExp("^[A-Za-z][A-Za-z0-9_.]{7,29}$");
+
+    if (!nameRegex.test(firstNameRef.current.value)) {
+      updateFirstNameErrorShow(true);
+      return;
+    }
+    if (!nameRegex.test(lastNameRef.current.value)) {
+      updateLastNameErrorShow(true);
+      return;
+    }
+
+    if (!emailRegex.test(emailRef.current.value)) {
+      updateEmailErrorShow(true);
+      return;
+    }
+    if (!userNameReg.test(userNameRef.current.value)) {
+      updateUserNameNameErrorShow(true);
+      return;
+    }
+    if (userGroupValue === "Choose User Group") {
+    }
     const newDate = new Date();
     try {
       const response = await fetch(
@@ -70,61 +104,41 @@ function Popup({ updateShowPopup, user }) {
         </div>
 
         <div className="bg-[#FAF8FB] px-4 flex flex-col gap-1">
-          <div className="full-name flex flex-col mt-5 gap-3">
-            <label htmlFor="" className="text-[16px] font-bold text-[#0C1533]">
-              First Name
-            </label>
-            <div>
-              <input
-                ref={firstNameRef}
-                type="text"
-                placeholder="Enter first name"
-                className="px-2 py-3 rounded-md w-full outline-none border border-1"
-              />
-            </div>
-          </div>
+          <InputField
+            placeholder={"Enter user first name"}
+            errorMsg={
+              "Please enter a name that contains at least three characters"
+            }
+            reference={firstNameRef}
+            label={"firstName"}
+            showError={firstNameErrorShow}
+          />
 
-          <div className="full-name flex flex-col mt-5 gap-3">
-            <label htmlFor="" className="text-[16px] font-bold text-[#0C1533]">
-              Last Name
-            </label>
-            <div>
-              <input
-                ref={lastNameRef}
-                type="text"
-                placeholder="Enter last name"
-                className="px-2 py-3 rounded-md w-full outline-none border border-1"
-              />
-            </div>
-          </div>
+          <InputField
+            placeholder={"Enter user last name"}
+            errorMsg={
+              "Please enter a name that contains at least three characters"
+            }
+            reference={lastNameRef}
+            label={"lastName"}
+            showError={lastNameErrorShow}
+          />
 
-          <div className="full-name flex flex-col mt-5 gap-3">
-            <label htmlFor="" className="text-[16px] font-bold text-[#0C1533]">
-              User Name
-            </label>
-            <div>
-              <input
-                ref={userNameRef}
-                type="text"
-                placeholder="Enter Username"
-                className="px-2 py-3 rounded-md w-full outline-none border border-1"
-              />
-            </div>
-          </div>
+          <InputField
+            placeholder={"Enter user  user name"}
+            errorMsg={"Please enter a valid user name no spaces allowed"}
+            reference={userNameRef}
+            label={"UserName"}
+            showError={usernameErrorShow}
+          />
 
-          <div className="full-name flex flex-col mt-5 gap-3">
-            <label htmlFor="" className="text-[16px] font-bold text-[#0C1533]">
-              Email Address
-            </label>
-            <div>
-              <input
-                ref={emailRef}
-                type="text"
-                placeholder="Enter user eamil addresss"
-                className="px-2 py-3 rounded-md w-full outline-none border border-1"
-              />
-            </div>
-          </div>
+          <InputField
+            placeholder={"Enter user email"}
+            errorMsg={"Please enter a valid email"}
+            reference={emailRef}
+            label={"Email"}
+            showError={emailErrorShow}
+          />
 
           <div className="flex flex-col mt-5 gap-3">
             <label htmlFor="" className="text-[16px] font-bold text-[#0C1533]">
@@ -135,6 +149,8 @@ function Popup({ updateShowPopup, user }) {
               items={groups}
               updateSelectValue={updateUserGroupValue}
             />
+
+            {groupErrorShow && <ErrorMsg errorMsg={"Please Select a group"} />}
           </div>
 
           <div className="flex flex-col mt-5 gap-3">
