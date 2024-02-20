@@ -28,7 +28,7 @@
       "createdOn": "Dec 10,2022",
       "email": "ramy.mohsen@google.com",
       "group": "HR",
-      "status": "InActive"
+      "status": "Locked"
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "createdOn": "Oct 22,2018",
       "email": "hisham.haggag@like.com",
       "group": "HR",
-      "status": "InActive"
+      "status": "Locked"
     },
     {
       "id": "6",
@@ -48,7 +48,7 @@
       "createdOn": "Oct 22,2018",
       "email": "khaled.adam@like.com",
       "group": "HR",
-      "status": "InActive"
+      "status": "Locked"
     },
     {
       "id": "7",
@@ -58,7 +58,7 @@
       "createdOn": "Jun 17, 2020",
       "email": "kareem.farouk@nuvb.net",
       "group": "HR",
-      "status": "InActive"
+      "status": "Locked"
     },
     {
       "id": "8",

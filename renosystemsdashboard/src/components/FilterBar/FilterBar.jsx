@@ -23,7 +23,7 @@ function FilterBar() {
   }, [statusValue]);
   return (
     <div className=" flex gap-5 py-5 px-4 flex-wrap ">
-      <div className="relative ">
+      <div className="relative w-full md:w-auto ">
         <img
           className=" absolute top-[10px] left-2 cursor-pointer"
           src={searchIcon}
@@ -36,17 +36,17 @@ function FilterBar() {
           type="text"
           ref={generalSearchRef}
           placeholder="Search..."
-          className="outline-none pl-10 py-2 border border-1 rounded-md max-w-[200px] "
+          className="outline-none pl-10 py-2 border border-1 rounded-md w-full md:max-w-[200px] "
           onChange={(e) => dispatch(nameFilter(e.target.value))}
         />
       </div>
 
-      <div>
+      <div className="w-full md:w-auto">
         <input
           type="text"
           name="username-search"
           ref={usernameSearchRef}
-          className="outline-none  px-2 py-2 border border-1 rounded-md max-w-[200px]"
+          className="outline-none  px-2 py-2 border border-1 rounded-md w-full md:max-w-[200px]"
           placeholder="User Name"
           onChange={(e) => dispatch(usernameFilter(e.target.value))}
         />
@@ -57,10 +57,10 @@ function FilterBar() {
         selectValue={statusValue}
         updateSelectValue={updateStatusValue}
         selectName={"User"}
-        additionalStyles={"w-[200px]"}
+        additionalStyles={" w-full md:w-[200px]"}
       />
 
-      <div className=" w-[200px] relative flex items-center gap-4 py-2 border-1 border rounded-md px-3 cursor-pointer  before:absolute before:top-[-14px] before:left-[10px] before:content-['Created\_On'] before:w-fit before:h-5 before:z-10 before:bg-white before:text-[#7A7E90]">
+      <div className=" w-full md:w-[200px] relative flex items-center gap-4 py-2 border-1 border rounded-md px-3 cursor-pointer  before:absolute before:top-[-14px] before:left-[10px] before:content-['Created\_On'] before:w-fit before:h-5 before:z-10 before:bg-white before:text-[#7A7E90]">
         <input
           type="date"
           className=" outline-none"

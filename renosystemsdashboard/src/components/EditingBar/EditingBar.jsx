@@ -10,7 +10,7 @@ function EditingBar() {
   const dispatch = useDispatch();
   return (
     <div className="flex justify-between py-3 px-4 items-center text-[10px] text-nowrap lg:text-[1rem]">
-      <div className="editing-icons flex gap-3 items-center">
+      <div className="editing-icons flex flex-wrap  md:flex-no gap-3 items-center">
         <div className="select-number border-r pr-2 ">{length} selected</div>
         {!(length > 1) && <EditingUser />}
 
