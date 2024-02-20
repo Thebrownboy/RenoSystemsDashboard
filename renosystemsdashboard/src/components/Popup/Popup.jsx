@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import CustomizedSelect from "../CustomizedSelect/CustomizedSelect";
 import styles from "./popup.module.css";
 import { months } from "../../../constants";
+import { groups } from "../../../constants";
 function Popup({ updateShowPopup }) {
   const [userGroupValue, updateUserGroupValue] = useState("Choose User Group");
   const [userProfileValue, updateUserProfileValue] = useState("Choose Profile");
@@ -11,21 +12,26 @@ function Popup({ updateShowPopup }) {
   const emailRef = useRef();
   const submitValues = async () => {
     const newDate = new Date();
-    const response = await fetch("http://localhost:3000/employees", {
-      method: "POST",
-      body: JSON.stringify({
-        firstName: firstNameRef.current.value,
-        lastName: lastNameRef.current.value,
-        userName: userNameRef.current.value,
-        email: emailRef.current.value,
-        status: "active",
-        group: userGroupValue,
-        createdOn: `${months[newDate.getMonth()].substring(
-          0,
-          3
-        )} ${newDate.getDate()}, ${newDate.getFullYear()}`,
-      }),
-    });
+    try {
+      const response = await fetch("http://localhost:3000/employees", {
+        method: "POST",
+        body: JSON.stringify({
+          firstName: firstNameRef.current.value,
+          lastName: lastNameRef.current.value,
+          userName: userNameRef.current.value,
+          email: emailRef.current.value,
+          status: "active",
+          group: userGroupValue,
+          createdOn: `${months[newDate.getMonth()].substring(
+            0,
+            3
+          )} ${newDate.getDate()}, ${newDate.getFullYear()}`,
+        }),
+      });
+      window.location.reload();
+    } catch (err) {
+      console.log(err);
+    }
   };
   const resetValues = () => {
     updateUserGroupValue("Choose User Group");
@@ -114,7 +120,7 @@ function Popup({ updateShowPopup }) {
             </label>
             <CustomizedSelect
               selectValue={userGroupValue}
-              items={["one", "Two", "three"]}
+              items={groups}
               updateSelectValue={updateUserGroupValue}
             />
           </div>

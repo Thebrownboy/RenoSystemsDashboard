@@ -129,6 +129,16 @@
       "status": "active",
       "group": "Two",
       "createdOn": "Feb 20, 2024"
+    },
+    {
+      "id": "2324",
+      "firstName": "Omar ",
+      "lastName": "Mohamed",
+      "userName": "omar.mohamed",
+      "email": "omar.Mohamed@gmail.com",
+      "status": "active",
+      "group": "one",
+      "createdOn": "Feb 20, 2024"
     }
   ]
 }

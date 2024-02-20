@@ -6,6 +6,8 @@ export const availalbeSettings = [
 
 export const subNavLinks = ["Users", "Profiles", "Groups"];
 
+export const groups = ["Office", "Managers", "Head Office"];
+
 export const weekDays = [
   "Sunday",
   "Monday",
