@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-
+import React, { useRef, useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToSelected, removeFromSelected } from "../../redux/Rows/RowsSlice";
 function TableRow({
   firstName,
   lastName,
@@ -11,8 +12,11 @@ function TableRow({
   id,
 }) {
   const [checked, updateChecked] = useState(false);
+  const parentRef = useRef();
+  const dispatch = useDispatch();
   return (
     <div
+      ref={parentRef}
       id={id}
       className={`text-[#2F3650] px-4 py-4 gap-3 flex items-center ${
         checked ? "bg-[#eff0f3]" : ""
@@ -23,7 +27,14 @@ function TableRow({
           type="checkbox"
           className=" w-full h-full"
           value={checked}
-          onChange={() => updateChecked(!checked)}
+          onChange={() => {
+            if (checked === false) {
+              dispatch(addToSelected(parentRef.current.id));
+            } else {
+              dispatch(removeFromSelected(parentRef.current.id));
+            }
+            updateChecked(!checked);
+          }}
         />
       </div>
 

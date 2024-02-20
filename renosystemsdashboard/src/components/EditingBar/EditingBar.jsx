@@ -3,14 +3,19 @@ import penIcon from "../../assets/pen-svgrepo-com.svg";
 import dotsIcon from "../../assets/dots-vertical-svgrepo-com.svg";
 import lockIcon from "../../assets/lock-keyhole-svgrepo-com.svg";
 import blockIcon from "../../assets/block-prohibited-svgrepo-com.svg";
+import { useSelector } from "react-redux";
+import { legacy_createStore } from "@reduxjs/toolkit";
 function EditingBar() {
+  const length = useSelector((state) => state.rows.length);
   return (
     <div className="flex justify-between py-3 px-4 items-center">
       <div className="editing-icons flex gap-3 items-center">
-        <div className="select-number border-r pr-2 ">1 selected</div>
-        <div className="edit-icon bg-[#E7E9Ef] p-1  rounded-md cursor-pointer">
-          <img src={penIcon} width={24} height={24} alt="" />
-        </div>
+        <div className="select-number border-r pr-2 ">{length} selected</div>
+        {!(length > 1) && (
+          <div className="edit-icon bg-[#E7E9Ef] p-1  rounded-md cursor-pointer">
+            <img src={penIcon} width={24} height={24} alt="" />
+          </div>
+        )}
         <div className="block-icon bg-[#E7E9Ef] p-1 rounded-md cursor-pointer">
           <img src={blockIcon} width={24} height={24} alt="" />
         </div>
