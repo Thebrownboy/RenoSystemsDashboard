@@ -52,19 +52,14 @@ function FilterBar() {
         />
       </div>
 
-      <div
-        className="relative 
-                  w-[200px] py-2 flex items-center border-1 border rounded-md px-3
-                  before:absolute before:top-[-14px] 
-                  before:left-[10px] before:content-['Active\_Status'] before:w-fit before:h-5
-                  before:z-10 before:bg-white before:text-[#7A7E90]"
-      >
-        <CustomizedSelect
-          items={status}
-          selectValue={statusValue}
-          updateSelectValue={updateStatusValue}
-        />
-      </div>
+      <CustomizedSelect
+        items={status}
+        selectValue={statusValue}
+        updateSelectValue={updateStatusValue}
+        selectName={"User"}
+        additionalStyles={"w-[200px]"}
+      />
+
       <div className=" relative flex items-center gap-4 py-2 border-1 border rounded-md px-3 cursor-pointer  before:absolute before:top-[-14px] before:left-[10px] before:content-['Created\_On'] before:w-fit before:h-5 before:z-10 before:bg-white before:text-[#7A7E90]">
         <input
           type="date"

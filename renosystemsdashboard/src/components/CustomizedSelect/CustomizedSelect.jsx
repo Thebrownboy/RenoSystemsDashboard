@@ -1,7 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import downarrowIcon from "../../assets/downarrow.svg";
 
-function CustomizedSelect({ selectValue, updateSelectValue, items }) {
+function CustomizedSelect({
+  selectValue,
+  updateSelectValue,
+  items,
+  selectName,
+  additionalStyles,
+}) {
   const [showOptions, updateShowOptions] = useState(false);
   const selectRef = useRef();
   const expandRef = useRef();
@@ -13,7 +19,13 @@ function CustomizedSelect({ selectValue, updateSelectValue, items }) {
     });
   }, []);
   return (
-    <>
+    <div
+      className={`relative 
+              ${additionalStyles} py-2 flex items-center border-1 border rounded-md px-3
+              before:absolute before:top-[-14px] 
+              before:left-[10px] before:content-['${selectName}'] before:w-fit before:h-5
+              before:z-10 before:bg-white before:text-[#7A7E90]`}
+    >
       <div
         className=" flex items-center justify-between w-full"
         onClick={() => updateShowOptions(!showOptions)}
@@ -51,7 +63,7 @@ function CustomizedSelect({ selectValue, updateSelectValue, items }) {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }
 

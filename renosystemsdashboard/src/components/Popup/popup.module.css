@@ -1,0 +1,16 @@
+.popup {
+  z-index: 99999;
+}
+.popup::-webkit-scrollbar {
+  width: 12px;
+  background-color: white;
+}
+
+.popup::-webkit-scrollbar-track {
+}
+
+.popup::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 214, 214);
+  /* outline: 1px solid slategrey; */
+  border-radius: 12px;
+}
