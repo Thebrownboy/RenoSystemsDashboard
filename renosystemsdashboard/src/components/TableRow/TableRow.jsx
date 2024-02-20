@@ -12,7 +12,7 @@ function TableRow({
   const [checked, updateChecked] = useState(false);
   return (
     <div
-      className={`px-4 py-4 gap-3 flex items-center ${
+      className={`text-[#2F3650] px-4 py-4 gap-3 flex items-center ${
         checked ? "bg-[#eff0f3]" : ""
       }  border border-1 min-w-fit  text-nowrap`}
     >
@@ -25,7 +25,7 @@ function TableRow({
         />
       </div>
 
-      <div className="name flex gap-1  min-w-[200px]  items-center">
+      <div className="name flex gap-1  min-w-[200px]  items-center ">
         <div className="bg-black rounded-full text-white w-8 h-8 flex justify-center items-center">
           {firstName.substring(0, 1)}
           {lastName.substring(0, 1)}

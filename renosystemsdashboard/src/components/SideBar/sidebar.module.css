@@ -1,3 +1,6 @@
+.sidbar {
+  z-index: 99999;
+}
 .sidebar::-webkit-scrollbar {
   width: 12px;
   background-color: white;

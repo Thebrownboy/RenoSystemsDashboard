@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Header/Header";
 import UserMangment from "../UserManage/UserMangment";
 import MainCard from "../MainCard/MainCard";
+import Popup from "../Popup/Popup";
 
 function MainSection({ updateSideBarDisplay, sideBarDisplay }) {
   return (
@@ -12,6 +13,8 @@ function MainSection({ updateSideBarDisplay, sideBarDisplay }) {
         updateSideBarDisplay={updateSideBarDisplay}
         sideBarDisplay={sideBarDisplay}
       />
+
+      <Popup />
 
       <UserMangment />
       <MainCard />
