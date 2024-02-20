@@ -5,7 +5,7 @@ import SideBar from "./components/SideBar/SideBar";
 import { Routes, Route } from "react-router-dom";
 import Fallback from "./components/Fallback/Fallback";
 function App() {
-  const [sideBarDisplay, updateSideBarDisplay] = useState(true);
+  const [sideBarDisplay, updateSideBarDisplay] = useState(false);
   return (
     <div className=" flex  relative  h-[1880px]">
       {sideBarDisplay && (
@@ -19,7 +19,7 @@ function App() {
       >
         <Routes>
           <Route
-            path="/home"
+            path="/*"
             element={
               <MainSection
                 updateSideBarDisplay={updateSideBarDisplay}

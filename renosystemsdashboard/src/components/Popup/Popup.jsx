@@ -37,23 +37,24 @@ function Popup({ updateShowPopup, user }) {
       updateLastNameErrorShow(true);
       return;
     }
+    if (userNameRef.current.value !== "") {
+      try {
+        const response = await fetch(
+          `http://localhost:3000/employees?userName=${userNameRef.current.value}`
+        ).then((res) => res.json());
 
-    try {
-      const response = await fetch(
-        `http://localhost:3000/employees?userName=${userNameRef.current.value}`
-      ).then((res) => res.json());
-
-      if (
-        (response.length !== 0 && !user) ||
-        (user &&
-          user.userName !== userNameRef.current.value &&
-          response.length !== 0)
-      ) {
-        updateUserNameErrorMsg("this user name is already taken");
-        updateUserNameNameErrorShow(true);
-        return;
-      }
-    } catch (err) {}
+        if (
+          (response.length !== 0 && !user) ||
+          (user &&
+            user.userName !== userNameRef.current.value &&
+            response.length !== 0)
+        ) {
+          updateUserNameErrorMsg("this user name is already taken");
+          updateUserNameNameErrorShow(true);
+          return;
+        }
+      } catch (err) {}
+    }
     if (!userNameReg.test(userNameRef.current.value)) {
       updateUserNameErrorMsg("Please enter a valid user name ");
       updateUserNameNameErrorShow(true);

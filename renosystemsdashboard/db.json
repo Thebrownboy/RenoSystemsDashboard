@@ -5,20 +5,20 @@
       "lastName": "Smith",
       "userName": "Emily.Smith",
       "email": "emily.smith@example.com",
-      "status": "active",
-      "group": "Office",
+      "status": "Locked",
+      "group": "HR",
       "createdOn": "Feb 20, 2024",
       "id": "2"
     },
     {
-      "id": "3",
-      "firstName": "Michael",
+      "firstName": "Micky",
       "lastName": "Johnson",
       "userName": "Michael.Johnson",
-      "createdOn": "Mar 5, 2023",
-      "email": "michael.johnson@example.com",
+      "email": "michael.johns@onexample.com",
+      "status": "active",
       "group": "HR",
-      "status": "Locked"
+      "createdOn": "Feb 20, 2024",
+      "id": "3"
     },
     {
       "id": "4",
@@ -68,7 +68,7 @@
       "createdOn": "Sep 9, 2019",
       "email": "noor.hamdy@lesi.com",
       "group": "Office",
-      "status": "InActive"
+      "status": "Locked"
     },
     {
       "id": "9",
@@ -98,37 +98,17 @@
       "createdOn": "Dec 10,2022",
       "email": "mayar.farouq@share.net",
       "group": "Head Office",
-      "status": "InActive"
+      "status": "Locked"
     },
     {
-      "id": "df6c",
-      "firstName": "Abdalla",
+      "firstName": "abdalla",
       "lastName": "Mahmoud",
-      "userName": "Mohamed.Mahmoud",
-      "email": "Abdalla.Mahmoud@gmail.com",
-      "status": "InActive",
-      "group": "Two",
-      "createdOn": "Feb 20, 2024"
-    },
-    {
-      "id": "2324",
-      "firstName": "Omar ",
-      "lastName": "Mohamed",
-      "userName": "omar.mohamed",
-      "email": "omar.Mohamed@gmail.com",
-      "status": "InActive",
-      "group": "one",
-      "createdOn": "Feb 20, 2024"
-    },
-    {
-      "id": "a3e8",
-      "firstName": "Abdalla",
-      "lastName": "Mohamed",
-      "userName": "Abdalla.Mohamed",
-      "email": "Abdalla.Mohamed@Abdalla.com",
-      "status": "InActive",
+      "userName": "Abdalla.Mahmoud",
+      "email": "AbdallaMahmoud@gmail.com",
+      "status": "active",
       "group": "Managers",
-      "createdOn": "Feb 20, 2024"
+      "createdOn": "Feb 20, 2024",
+      "id": "61d9"
     }
   ]
 }
