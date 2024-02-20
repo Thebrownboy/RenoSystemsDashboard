@@ -27,6 +27,7 @@ function TableSection() {
       {employees.map((item, index) => {
         return (
           <TableRow
+            id={item.id}
             createdOn={item.createdOn}
             email={item.email}
             firstName={item.firstName}

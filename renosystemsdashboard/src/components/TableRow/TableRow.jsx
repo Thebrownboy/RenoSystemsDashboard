@@ -8,10 +8,12 @@ function TableRow({
   group,
   status,
   createdOn,
+  id,
 }) {
   const [checked, updateChecked] = useState(false);
   return (
     <div
+      id={id}
       className={`text-[#2F3650] px-4 py-4 gap-3 flex items-center ${
         checked ? "bg-[#eff0f3]" : ""
       }  border border-1 min-w-fit  text-nowrap`}

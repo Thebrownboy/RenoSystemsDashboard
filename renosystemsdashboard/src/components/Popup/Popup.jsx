@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import CustomizedSelect from "../CustomizedSelect/CustomizedSelect";
 import styles from "./popup.module.css";
+import { months } from "../../../constants";
 function Popup({ updateShowPopup }) {
   const [userGroupValue, updateUserGroupValue] = useState("Choose User Group");
   const [userProfileValue, updateUserProfileValue] = useState("Choose Profile");
@@ -8,6 +9,32 @@ function Popup({ updateShowPopup }) {
   const lastNameRef = useRef();
   const userNameRef = useRef();
   const emailRef = useRef();
+  const submitValues = async () => {
+    const newDate = new Date();
+    const response = await fetch("http://localhost:3000/employees", {
+      method: "POST",
+      body: JSON.stringify({
+        firstName: firstNameRef.current.value,
+        lastName: lastNameRef.current.value,
+        userName: userNameRef.current.value,
+        email: emailRef.current.value,
+        status: "active",
+        group: userGroupValue,
+        createdOn: `${months[newDate.getMonth()].substring(
+          0,
+          3
+        )} ${newDate.getDate()}, ${newDate.getFullYear()}`,
+      }),
+    });
+  };
+  const resetValues = () => {
+    updateUserGroupValue("Choose User Group");
+    updateUserProfileValue("Choose Profile");
+    firstNameRef.current.value = "";
+    lastNameRef.current.value = "";
+    userNameRef.current.value = "";
+    emailRef.current.value = "";
+  };
 
   return (
     <div className="  flex justify-center   fixed top-0 left-0 bg-[#7F7F7F] bg-opacity-35 w-screen h-full z-[40000000000]">
@@ -104,7 +131,12 @@ function Popup({ updateShowPopup }) {
           </div>
         </div>
         <div className=" mt-5 py-1 bg-[#F8FAFB] footer flex justify-between items-center  px-4  border-t-2 ">
-          <div className="reset underline cursor-pointer">Reset fields</div>
+          <div
+            className="reset underline cursor-pointer"
+            onClick={() => resetValues()}
+          >
+            Reset fields
+          </div>
           <div className="buttons flex gap-4">
             <button
               onClick={() => updateShowPopup(false)}
@@ -112,7 +144,12 @@ function Popup({ updateShowPopup }) {
             >
               Cancel
             </button>
-            <button className=" px-3  rounded-md bg-[#22A565]">Submit</button>
+            <button
+              className=" px-3  rounded-md bg-[#22A565]"
+              onClick={() => submitValues()}
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>

@@ -1,116 +1,134 @@
 {
-    "employees":[
-        {
-            "id":"1",
-          
-          "firstName": "John",
-          "lastName": "Doe",
-          "userName": "John.Doe",
-          "createdOn": "Jan 15, 2023",
-          "email": "john.doe@example.com",
-          "group": "Admin",
-          "status": "active"
-        },
-        {
-            "id":"2",
-          "firstName": "Emily",
-          "lastName": "Smith",
-          "userName": "Emily.Smith",
-          "createdOn": "Feb 28, 2023",
-          "email": "emily.smith@example.com",
-          "group": "HR",
-          "status": "active"
-        },
-        {
-            "id":"3",
-          "firstName": "Michael",
-          "lastName": "Johnson",
-          "userName": "Michael.Johnson",
-          "createdOn": "Mar 5, 2023",
-          "email": "michael.johnson@example.com",
-          "group": "Marketing",
-          "status": "active"
-        },
-        {
-            "id":"4",
-          "firstName": "Ramy",
-          "lastName": "Mohsen",
-          "userName": "Ramy.Mohsen",
-          "createdOn": "Dec 10,2022",
-          "email": "ramy.mohsen@google.com",
-          "group": "Office",
-          "status": "locked"
-        },
-        {
-            "id":"5",
-          "firstName": "Hisham",
-          "lastName": "Hagag",
-          "userName": "hisham.haggag",
-          "createdOn": "Oct 22,2018",
-          "email": "hisham.haggag@like.com",
-          "group": "Managers",
-          "status": "Inactive"
-        },
-        {
-            "id":"6",
-          "firstName": "Khaled",
-          "lastName": "Adam",
-          "userName": "khaled.adam",
-          "createdOn": "Oct 22,2018",
-          "email": "khaled.adam@like.com",
-          "group": "Office",
-          "status": "Active"
-        },
-        {
-            "id":"7",
-          "firstName": "كريم",
-          "lastName": "فاروق",
-          "userName": "kareem.farouk",
-          "createdOn": "Jun 17, 2020",
-          "email": "kareem.farouk@nuvb.net",
-          "group": "Office",
-          "status": "Active"
-        },
-        {
-            "id":"8",
-          "firstName": "Noor",
-          "lastName": "Hamdy",
-          "userName": "noor.hamdy",
-          "createdOn": "Sep 9, 2019",
-          "email": "noor.hamdy@lesi.com",
-          "group": "Office",
-          "status": "Managers"
-        },
-        {
-            "id":"9",
-          "firstName": "حنان",
-          "lastName": "فوزي",
-          "userName": "hanan.fawzy",
-          "createdOn": "Sep 21 , 2020",
-          "email": "hanan.fawzy@buno.net",
-          "group": "Head Office",
-          "status": "Active"
-        },
-        {
-            "id":"10",
-          "firstName": "ايمان",
-          "lastName": "آدم",
-          "userName": "iman.adam",
-          "createdOn": "Dec 27,2019",
-          "email": "iman.adam@fadok.net",
-          "group": "Office",
-          "status": "active"
-        },
-        {
-        "id":"11",
-          "firstName": "Mayar",
-          "lastName": "Farouq",
-          "userName": "mayar.farouq",
-          "createdOn": "Dec 10,2022",
-          "email": "mayar.farouq@share.net",
-          "group": "Head Office",
-          "status": "Active"
-        }
-      ]
-      
+  "employees": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "lastName": "Doe",
+      "userName": "John.Doe",
+      "createdOn": "Jan 15, 2023",
+      "email": "john.doe@example.com",
+      "group": "Admin",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "firstName": "Emily",
+      "lastName": "Smith",
+      "userName": "Emily.Smith",
+      "createdOn": "Feb 28, 2023",
+      "email": "emily.smith@example.com",
+      "group": "HR",
+      "status": "active"
+    },
+    {
+      "id": "3",
+      "firstName": "Michael",
+      "lastName": "Johnson",
+      "userName": "Michael.Johnson",
+      "createdOn": "Mar 5, 2023",
+      "email": "michael.johnson@example.com",
+      "group": "Marketing",
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "firstName": "Ramy",
+      "lastName": "Mohsen",
+      "userName": "Ramy.Mohsen",
+      "createdOn": "Dec 10,2022",
+      "email": "ramy.mohsen@google.com",
+      "group": "Office",
+      "status": "locked"
+    },
+    {
+      "id": "5",
+      "firstName": "Hisham",
+      "lastName": "Hagag",
+      "userName": "hisham.haggag",
+      "createdOn": "Oct 22,2018",
+      "email": "hisham.haggag@like.com",
+      "group": "Managers",
+      "status": "Inactive"
+    },
+    {
+      "id": "6",
+      "firstName": "Khaled",
+      "lastName": "Adam",
+      "userName": "khaled.adam",
+      "createdOn": "Oct 22,2018",
+      "email": "khaled.adam@like.com",
+      "group": "Office",
+      "status": "Active"
+    },
+    {
+      "id": "7",
+      "firstName": "كريم",
+      "lastName": "فاروق",
+      "userName": "kareem.farouk",
+      "createdOn": "Jun 17, 2020",
+      "email": "kareem.farouk@nuvb.net",
+      "group": "Office",
+      "status": "Active"
+    },
+    {
+      "id": "8",
+      "firstName": "Noor",
+      "lastName": "Hamdy",
+      "userName": "noor.hamdy",
+      "createdOn": "Sep 9, 2019",
+      "email": "noor.hamdy@lesi.com",
+      "group": "Office",
+      "status": "Managers"
+    },
+    {
+      "id": "9",
+      "firstName": "حنان",
+      "lastName": "فوزي",
+      "userName": "hanan.fawzy",
+      "createdOn": "Sep 21 , 2020",
+      "email": "hanan.fawzy@buno.net",
+      "group": "Head Office",
+      "status": "Active"
+    },
+    {
+      "id": "10",
+      "firstName": "ايمان",
+      "lastName": "آدم",
+      "userName": "iman.adam",
+      "createdOn": "Dec 27,2019",
+      "email": "iman.adam@fadok.net",
+      "group": "Office",
+      "status": "active"
+    },
+    {
+      "id": "11",
+      "firstName": "Mayar",
+      "lastName": "Farouq",
+      "userName": "mayar.farouq",
+      "createdOn": "Dec 10,2022",
+      "email": "mayar.farouq@share.net",
+      "group": "Head Office",
+      "status": "Active"
+    },
+    {
+      "id": "6021",
+      "firstName": "Abdalla",
+      "lastName": "Mahmoud",
+      "userName": "abdalla.mahmoud",
+      "email": "abdalla.mahmoud@gmail.com",
+      "status": "active",
+      "group": "Two",
+      "createdOn": "February 20, 2024"
+    },
+    {
+      "id": "df6c",
+      "firstName": "Abdalla",
+      "lastName": "Mahmoud",
+      "userName": "Mohamed.Mahmoud",
+      "email": "Abdalla.Mahmoud@gmail.com",
+      "status": "active",
+      "group": "Two",
+      "createdOn": "Feb 20, 2024"
+    }
+  ]
 }
