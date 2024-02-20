@@ -5,6 +5,7 @@ import lockIcon from "../../assets/lock-keyhole-svgrepo-com.svg";
 import blockIcon from "../../assets/block-prohibited-svgrepo-com.svg";
 import { useSelector } from "react-redux";
 import { legacy_createStore } from "@reduxjs/toolkit";
+import AssignGroup from "../AssignGroup/AssignGroup";
 function EditingBar() {
   const length = useSelector((state) => state.rows.length);
   return (
@@ -25,9 +26,7 @@ function EditingBar() {
         <div className="assign-profile p-2 bg-[#E7E9Ef] rounded-md text-[#707689] font-semibold cursor-pointer">
           Assign to Profile
         </div>
-        <div className="assign-group p-2 bg-[#E7E9Ef] rounded-md text-[#707689] font-semibold cursor-pointer">
-          Assign to group
-        </div>
+        <AssignGroup />
         <div className="three-dots bg-[#E7E9Ef] p-2 rounded-md cursor-pointer">
           <img src={dotsIcon} width={24} height={24} alt="" />
         </div>

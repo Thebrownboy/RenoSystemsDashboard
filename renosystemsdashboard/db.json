@@ -1,16 +1,6 @@
 {
   "employees": [
     {
-      "id": "1",
-      "firstName": "John",
-      "lastName": "Doe",
-      "userName": "John.Doe",
-      "createdOn": "Jan 15, 2023",
-      "email": "john.doe@example.com",
-      "group": "Admin",
-      "status": "active"
-    },
-    {
       "id": "2",
       "firstName": "Emily",
       "lastName": "Smith",
@@ -27,7 +17,7 @@
       "userName": "Michael.Johnson",
       "createdOn": "Mar 5, 2023",
       "email": "michael.johnson@example.com",
-      "group": "Marketing",
+      "group": "HR",
       "status": "active"
     },
     {
@@ -37,7 +27,7 @@
       "userName": "Ramy.Mohsen",
       "createdOn": "Dec 10,2022",
       "email": "ramy.mohsen@google.com",
-      "group": "Office",
+      "group": "HR",
       "status": "locked"
     },
     {
@@ -47,7 +37,7 @@
       "userName": "hisham.haggag",
       "createdOn": "Oct 22,2018",
       "email": "hisham.haggag@like.com",
-      "group": "Managers",
+      "group": "HR",
       "status": "Inactive"
     },
     {
@@ -57,7 +47,7 @@
       "userName": "khaled.adam",
       "createdOn": "Oct 22,2018",
       "email": "khaled.adam@like.com",
-      "group": "Office",
+      "group": "HR",
       "status": "Active"
     },
     {
@@ -67,7 +57,7 @@
       "userName": "kareem.farouk",
       "createdOn": "Jun 17, 2020",
       "email": "kareem.farouk@nuvb.net",
-      "group": "Office",
+      "group": "HR",
       "status": "Active"
     },
     {
