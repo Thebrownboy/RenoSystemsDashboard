@@ -5,7 +5,7 @@
       "lastName": "Smith",
       "userName": "Emily.Smith",
       "email": "emily.smith@example.com",
-      "status": "active",
+      "status": "InActive",
       "group": "HR",
       "createdOn": "Feb 20, 2024",
       "id": "2"
@@ -18,7 +18,7 @@
       "createdOn": "Mar 5, 2023",
       "email": "michael.johnson@example.com",
       "group": "HR",
-      "status": "active"
+      "status": "InActive"
     },
     {
       "id": "4",
@@ -28,7 +28,7 @@
       "createdOn": "Dec 10,2022",
       "email": "ramy.mohsen@google.com",
       "group": "HR",
-      "status": "locked"
+      "status": "InActive"
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "createdOn": "Oct 22,2018",
       "email": "hisham.haggag@like.com",
       "group": "HR",
-      "status": "Inactive"
+      "status": "InActive"
     },
     {
       "id": "6",
@@ -48,7 +48,7 @@
       "createdOn": "Oct 22,2018",
       "email": "khaled.adam@like.com",
       "group": "HR",
-      "status": "Active"
+      "status": "InActive"
     },
     {
       "id": "7",
@@ -58,7 +58,7 @@
       "createdOn": "Jun 17, 2020",
       "email": "kareem.farouk@nuvb.net",
       "group": "HR",
-      "status": "Active"
+      "status": "InActive"
     },
     {
       "id": "8",
@@ -68,7 +68,7 @@
       "createdOn": "Sep 9, 2019",
       "email": "noor.hamdy@lesi.com",
       "group": "Office",
-      "status": "Managers"
+      "status": "InActive"
     },
     {
       "id": "9",
@@ -78,7 +78,7 @@
       "createdOn": "Sep 21 , 2020",
       "email": "hanan.fawzy@buno.net",
       "group": "Head Office",
-      "status": "Active"
+      "status": "InActive"
     },
     {
       "id": "10",
@@ -88,7 +88,7 @@
       "createdOn": "Dec 27,2019",
       "email": "iman.adam@fadok.net",
       "group": "Office",
-      "status": "active"
+      "status": "InActive"
     },
     {
       "id": "11",
@@ -98,17 +98,7 @@
       "createdOn": "Dec 10,2022",
       "email": "mayar.farouq@share.net",
       "group": "Head Office",
-      "status": "Active"
-    },
-    {
-      "id": "6021",
-      "firstName": "Abdalla",
-      "lastName": "Mahmoud",
-      "userName": "abdalla.mahmoud",
-      "email": "abdalla.mahmoud@gmail.com",
-      "status": "active",
-      "group": "Two",
-      "createdOn": "February 20, 2024"
+      "status": "InActive"
     },
     {
       "id": "df6c",
@@ -116,7 +106,7 @@
       "lastName": "Mahmoud",
       "userName": "Mohamed.Mahmoud",
       "email": "Abdalla.Mahmoud@gmail.com",
-      "status": "active",
+      "status": "InActive",
       "group": "Two",
       "createdOn": "Feb 20, 2024"
     },
@@ -126,7 +116,7 @@
       "lastName": "Mohamed",
       "userName": "omar.mohamed",
       "email": "omar.Mohamed@gmail.com",
-      "status": "active",
+      "status": "InActive",
       "group": "one",
       "createdOn": "Feb 20, 2024"
     },
@@ -136,7 +126,7 @@
       "lastName": "Mohamed",
       "userName": "Abdalla.Mohamed",
       "email": "Abdalla.Mohamed@Abdalla.com",
-      "status": "active",
+      "status": "InActive",
       "group": "Managers",
       "createdOn": "Feb 20, 2024"
     }
