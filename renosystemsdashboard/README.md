@@ -7,6 +7,7 @@
 - [About](#about)
 - [getting started](#start)
 - [Demo](#demo)
+- [ScreenShots](#screenshots)
 
 ## About
 
@@ -44,6 +45,22 @@ The objective of this dashboard is to provide a centralized platform for trackin
    npm run dev
    ```
 
-## Demo <a name = "Demo"></a>
+## Demo <a name = "demo"></a>
 
 https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/59e9a593-db38-463b-9f2a-bc6e2946d897
+
+## ScreenShots <a name="screenshots">
+
+![ScreenShot1](https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/cfc1b546-3062-4767-864c-000affcf83ff)
+
+<hr>
+
+![ScreenShot2](https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/3f718698-f90a-49cd-ae59-7d48833e912b)
+
+<hr>
+
+![ScreenShot3](https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/cbde2eb3-aab3-41fb-9a47-4cd0b1c29fad)
+
+<hr>
+
+![ScreenShot4](https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/1b0f87bc-5268-413e-b1d0-39d5bbd95f20)
