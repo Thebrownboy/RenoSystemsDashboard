@@ -86,11 +86,25 @@ https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/59e9a593-db3
 
 ![ScreenShot4](https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/1b0f87bc-5268-413e-b1d0-39d5bbd95f20)
 
+<hr>
+
+![ScreenShot5](https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/984bd0a9-ba50-4f35-be73-f92593f5511f)
+<hr>
+
+![ScreenShot6](https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/cc6a1c98-9dc8-472d-a734-32210fe51941)
+
+## Responsive
 
 
+![ScreenShot7](https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/7ec78867-1531-4c64-b057-2e26a093d42a)
 
+<hr>
 
+![ScreenShot8](https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/ae15c7cf-c785-4773-9ef4-ad08323df3e4)
 
+<hr>
+
+![ScreenShot9](https://github.com/Thebrownboy/RenoSystemsDashboard/assets/47921768/d8c65b80-2bb9-466a-8d48-d206bc38ba11)
 
 
 
