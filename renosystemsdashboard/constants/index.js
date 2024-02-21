@@ -1,7 +1,24 @@
 export const availalbeSettings = [
-  "ATM Settings",
-  "Business Setup",
-  "User Mangement",
+  {
+    item: "ATM Settings",
+    subNavLinks: [
+      "Transaction Limits",
+      "Network configuration",
+      "Screen and Display Settings",
+    ],
+  },
+  {
+    item: "Business Setup",
+    subNavLinks: [
+      "Location Management",
+      "Product Catalog",
+      "Employee Roles and Permissions",
+    ],
+  },
+  {
+    item: "User Mangement",
+    subNavLinks: ["User Profiles", "Password Management", "Activity Logs"],
+  },
 ];
 
 export const subNavLinks = ["Users", "Profiles", "Groups"];

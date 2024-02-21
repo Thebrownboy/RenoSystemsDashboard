@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import downarrow from "../../assets/downarrow.svg";
 import { subNavLinks } from "../../../constants";
 import { NavLink, useLocation } from "react-router-dom";
-function SettingsItem({ item }) {
+function SettingsItem({ item, subNavLinks }) {
   const [hidden, updateHidden] = useState(true);
   const { pathname } = useLocation();
   useEffect(() => {

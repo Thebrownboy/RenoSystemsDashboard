@@ -51,7 +51,11 @@ function SideBar({ updateSideBarDisplay }) {
       </div>
       <div className=" pl-3 flex gap-4  md:gap-7 flex-col">
         {availalbeSettings.map((item, index) => (
-          <SettingsItem item={item} key={index} />
+          <SettingsItem
+            subNavLinks={item.subNavLinks}
+            item={item.item}
+            key={index}
+          />
         ))}
         <div className=" mt-5 pl-3 text-sm text-[#d5d7db] lg:text-xl ">
           License Managment
