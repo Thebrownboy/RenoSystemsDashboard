@@ -38,6 +38,11 @@ const linksSlice = createSlice({
   name: "links",
   reducers: {
     filterLinks: (state, action) => {
+      console.log("this is action", action);
+      if (action.payload === "") {
+        state.filteredLinks = [];
+        return;
+      }
       state.filteredLinks = [];
       for (let i = 0; i < state.allLinks.length; i++) {
         if (
@@ -51,3 +56,7 @@ const linksSlice = createSlice({
     },
   },
 });
+
+export default linksSlice.reducer;
+
+export const { filterLinks } = linksSlice.actions;
