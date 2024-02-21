@@ -33,7 +33,7 @@ function SideBar({ updateSideBarDisplay }) {
           alt=""
           className="w-[24px] h-[24px] absolute top-[25%] right-4 cursor-pointer"
           onClick={() => {
-            dispatch(allFieldsFilter(searchBarRef.current.value));
+            dispatch(filterLinks(searchBarRef.current.value));
           }}
         />
         <input
